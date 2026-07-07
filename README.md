@@ -45,7 +45,7 @@ terraform-infrastructure/
 │   ├── dev/
 │   └── prod/
 ├── diagrams/
-│   └── architecture.png
+│   └── tf_architecture.png
 └── README.md
 ```
 
