@@ -8,10 +8,10 @@ It is designed to showcase practical DevOps skills:
 
  - Modular Terraform design
  - Environment separation (dev/prod)
- -  Remote state + state locking
+ - Remote state + state locking
  - AWS networking fundamentals
- -  Secure infrastructure patterns
- -  Clear documentation and architecture diagrams
+ - Secure infrastructure patterns
+ - Clear documentation and architecture diagrams
 
 # Architecture
 The infrastructure includes:
@@ -19,37 +19,37 @@ The infrastructure includes:
  - Public subnet
  - Private subnet
  - Internet Gateway
-  - NAT Gateway
+ - NAT Gateway
  - Route tables + associations
  - Security groups
  - EC2 instance in private subnet
  - IAM role for EC2
  - S3 bucket for Terraform remote state
  - DynamoDB table for state locking
+
 A visual diagram is included in the diagrams/ folder.
 
 # Project Structure
+```
 terraform-infrastructure/
-│
 ├── modules/
 │   ├── vpc/
 │   ├── ec2/
 │   └── security-groups/
-│
 ├── envs/
 │   ├── dev/
 │   └── prod/
-│
 ├── diagrams/
 │   └── architecture.png
-│
 └── README.md
+```
 
 # Remote State Setup
 Terraform remote state is stored in:
 
-S3 bucket (e.g., terraform-state-nadia)
-DynamoDB table for state locking (e.g., terraform-lock)
+- S3 bucket (e.g., terraform-state-nadia)
+- DynamoDB table for state locking (e.g., terraform-lock)
+
 This enables safe collaboration, prevents state corruption, and reflects production workflows.
 
 # How to Deploy
@@ -70,13 +70,13 @@ This enables safe collaboration, prevents state corruption, and reflects product
 
 # Modules Included
 - VPC Module
-Creates the VPC, subnets, IGW, NAT Gateway, route tables, and associations.
+  Creates the VPC, subnets, IGW, NAT Gateway, route tables, and associations.
 
 - Security Groups Module
-Defines reusable security groups for EC2 and other resources.
+  Defines reusable security groups for EC2 and other resources.
 
 - EC2 Module
-Deploys an EC2 instance into the private subnet with IAM roles and optional user data.
+  Deploys an EC2 instance into the private subnet with IAM roles and optional user data.
 
 # Technologies Used
 - Terraform
