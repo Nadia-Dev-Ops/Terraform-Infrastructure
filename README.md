@@ -2,7 +2,7 @@
 A modular, production‑style AWS environment deployed using Terraform. This project demonstrates Infrastructure‑as‑Code (IaC), networking fundamentals, remote state management, and real DevOps workflows.
 
 # Overview
-This project provisions a secure, scalable AWS environment using Terraform. It includes a VPC, public and private subnets, routing, security groups, an EC2 instance, and a full remote state backend using S3 + DynamoDB.
+This project provisions a secure, scalable AWS environment using Terraform. It includes a VPC, public and private subnets, routing, security groups, an EC2 instance, and a full remote state backend using S3 and DynamoDB.
 
 It is designed to showcase practical DevOps skills:
 
@@ -93,13 +93,13 @@ How IAM roles and security groups shape access patterns
 How to structure IaC repositories professionally
 How to deploy infrastructure repeatedly across environments
 
-#Future Improvements
-Add ALB + Auto Scaling Group
-Add RDS or DynamoDB
-Add CI/CD pipeline for Terraform (GitHub Actions)
-Add monitoring dashboards (CloudWatch / Grafana)
-Add SSM Session Manager instead of SSH
-Add tagging standards for cost visibility
+# Future Improvements
+- Add ALB + Auto Scaling Group
+- Add RDS or DynamoDB
+- Add CI/CD pipeline for Terraform (GitHub Actions)
+- Add monitoring dashboards (CloudWatch / Grafana)
+- Add SSM Session Manager instead of SSH
+- Add tagging standards for cost visibility
 
 # About This Project
 This project is part of my DevOps/Cloud Engineering portfolio, demonstrating practical skills in AWS, Terraform, automation, and infrastructure design.
