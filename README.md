@@ -29,6 +29,11 @@ The infrastructure includes:
 
 A visual diagram is included in the diagrams/ folder.
 
+## 🏗️ Architecture Diagram
+
+![Architecture Diagram](./diagrams/tf_architecture.png)
+
+
 # Project Structure
 ```
 terraform-infrastructure/
