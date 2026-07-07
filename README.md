@@ -27,11 +27,8 @@ The infrastructure includes:
  - S3 bucket for Terraform remote state
  - DynamoDB table for state locking
 
-A visual diagram is included in the diagrams/ folder.
-
-## 🏗️ Architecture Diagram
-
-![Architecture Diagram](./diagrams/tf_architecture.png)
+# Architecture Diagram
+![Architecture Diagram](./diagrams/architecture.png)
 
 
 # Project Structure
