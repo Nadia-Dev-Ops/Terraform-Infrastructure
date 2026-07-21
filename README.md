@@ -1,7 +1,9 @@
-**Terraform AWS Infrastructure Project**
+**Terraform AWS Infrastructure Project**  
+
 A modular, production‑style AWS environment deployed using Terraform. This project demonstrates Infrastructure‑as‑Code (IaC), secure networking, remote state management, and real DevOps workflows.
 
 **Overview**
+
 This project provisions a secure AWS environment using Terraform. It includes a VPC with public and private subnets, routing, security groups, an EC2 instance in a private subnet, and a full remote state backend using S3 and DynamoDB.
 
 It is designed to showcase practical DevOps skills:
@@ -19,35 +21,36 @@ It is designed to showcase practical DevOps skills:
 - Clear documentation and architecture diagrams
 
 **Architecture**
+
 The infrastructure includes:
 
-VPC
+- VPC
 
-Public subnet
+- Public subnet
 
-Private subnet
+- Private subnet
 
-Internet Gateway
+- Internet Gateway
 
-NAT Gateway
+- NAT Gateway
 
-Route tables + associations
+- Route tables + associations
 
-Security groups
+- Security groups
 
-EC2 instance in private subnet
+- EC2 instance in private subnet
 
-IAM role for EC2
+- IAM role for EC2
 
-S3 bucket for Terraform remote state
+- S3 bucket for Terraform remote state
 
-DynamoDB table for state locking
+- DynamoDB table for state locking
 
-Application Load Balancer (ALB)
+- Application Load Balancer (ALB)
 
 This architecture follows modern AWS best practices, including SSM‑only access and no exposed SSH ports.
 
-Architecture Diagram
+**Architecture Diagram**    
 [Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
 Security Model
