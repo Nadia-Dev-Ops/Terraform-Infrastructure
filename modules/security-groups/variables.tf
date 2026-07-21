@@ -13,3 +13,8 @@ variable "rds_port" {
   default     = 5432
   description = "Port for RDS (default PostgreSQL)"
 }
+
+variable "bastion_sg_id" {
+  type        = string
+  description = "Security group ID of the bastion host"
+}

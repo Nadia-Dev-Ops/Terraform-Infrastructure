@@ -99,29 +99,3 @@ resource "aws_security_group" "private_ec2" {
     Name = "${var.project}-private-ec2-sg"
   }
 }
-
-resource "aws_security_group" "rds" {
-  name        = "${var.project}-rds-sg"
-  description = "Security group for RDS"
-  vpc_id      = var.vpc_id
-
-  ingress {
-    description = "Allow private EC2 to access RDS"
-    from_port   = var.rds_port
-    to_port     = var.rds_port
-    protocol    = "tcp"
-    security_groups = [aws_security_group.private_ec2.id]
-  }
-
-  egress {
-    description = "Allow all outbound"
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "${var.project}-rds-sg"
-  }
-}
