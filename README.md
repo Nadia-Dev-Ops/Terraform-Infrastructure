@@ -1,7 +1,7 @@
-#Terraform AWS Infrastructure Project
+Terraform AWS Infrastructure Project
 A modular, production‑style AWS environment deployed using Terraform. This project demonstrates Infrastructure‑as‑Code (IaC), secure networking, remote state management, and real DevOps workflows.
 
-#Overview
+Overview
 This project provisions a secure AWS environment using Terraform. It includes a VPC with public and private subnets, routing, security groups, an EC2 instance in a private subnet, and a full remote state backend using S3 and DynamoDB.
 
 It is designed to showcase practical DevOps skills:
@@ -82,8 +82,6 @@ Fully auditable access (CloudTrail + SSM logs)
 Cleaner architecture and simpler operations
 
 Connectivity Flow
-This section explains how traffic moves through the environment.
-
 Inbound Traffic (Public → Private)
 User accesses the ALB (public subnet).
 
@@ -92,7 +90,7 @@ ALB forwards HTTP traffic to the private EC2 instance.
 Private EC2 responds through the ALB.
 
 Outbound Traffic (Private → Internet)
-Private EC2 sends outbound HTTPS traffic (e.g., SSM, yum updates).
+Private EC2 sends outbound HTTPS traffic (SSM, yum updates, etc.).
 
 NAT Gateway forwards traffic to the internet.
 
@@ -108,8 +106,6 @@ You connect using AWS Console or CLI:
 EC2 → Connect → Session Manager
 
 No inbound ports, no SSH, no bastion host.
-
-This creates a secure, modern, minimal‑exposure environment.
 
 Instance Access (SSM‑Only)
 This infrastructure uses AWS Systems Manager Session Manager for all EC2 access.
@@ -149,5 +145,83 @@ Terraform remote state is stored in:
 S3 bucket (e.g., terraform-state-nadia)
 
 DynamoDB table for state locking (e.g., terraform-lock)
+
+This enables safe collaboration, prevents state corruption, and reflects production workflows.
+
+How to Deploy
+Configure AWS credentials
+
+Code
+aws configure
+Navigate to an environment
+
+Code
+cd envs/dev
+Initialise Terraform
+
+Code
+terraform init
+Preview changes
+
+Code
+terraform plan
+Deploy infrastructure
+
+Code
+terraform apply
+Modules Included
+VPC Module
+Creates the VPC, subnets, IGW, NAT Gateway, route tables, and associations.
+
+Security Groups Module
+Defines reusable security groups for ALB and private EC2.
+
+EC2 Module
+Deploys an EC2 instance into the private subnet with IAM roles and optional user data.
+
+ALB Module
+Creates an Application Load Balancer, target group, listener, and EC2 attachment.
+
+Technologies Used
+Terraform
+
+AWS (EC2, VPC, IAM, S3, DynamoDB, ALB, CloudWatch)
+
+Infrastructure‑as‑Code (IaC)
+
+Remote state + locking
+
+Modular Terraform patterns
+
+What I Learned
+How to design modular Terraform code
+
+How remote state and locking work in real DevOps teams
+
+How to build secure AWS networking (public/private subnets, routing, NAT)
+
+How IAM roles and security groups shape access patterns
+
+How to structure IaC repositories professionally
+
+How to deploy infrastructure repeatedly across environments
+
+How to implement modern SSM‑only access patterns
+
+Future Improvements
+Add VPC Endpoints for SSM (remove NAT dependency)
+
+Add Auto Scaling Group
+
+Add RDS or DynamoDB
+
+Add CI/CD pipeline for Terraform (GitHub Actions)
+
+Add monitoring dashboards (CloudWatch / Grafana)
+
+Add tagging standards for cost visibility
+
+About This Project
+This project is part of my DevOps/Cloud Engineering portfolio, demonstrating practical skills in AWS, Terraform, automation, and infrastructure design.
 
 This enables safe collaboration, prevents state corruption, and reflects production workflows.
