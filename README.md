@@ -1,7 +1,7 @@
-Terraform AWS Infrastructure Project
+#Terraform AWS Infrastructure Project
 A modular, production‑style AWS environment deployed using Terraform. This project demonstrates Infrastructure‑as‑Code (IaC), secure networking, remote state management, and real DevOps workflows.
 
-Overview
+#Overview
 This project provisions a secure AWS environment using Terraform. It includes a VPC with public and private subnets, routing, security groups, an EC2 instance in a private subnet, and a full remote state backend using S3 and DynamoDB.
 
 It is designed to showcase practical DevOps skills:
