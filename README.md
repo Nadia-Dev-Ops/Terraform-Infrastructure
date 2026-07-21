@@ -1,3 +1,6 @@
+Terraform AWS Infrastructure Project
+A modular, production‑style AWS environment deployed using Terraform. This project demonstrates Infrastructure‑as‑Code (IaC), networking fundamentals, remote state management, and real DevOps workflows.
+
 **Terraform AWS Infrastructure Project**  
 
 A modular, production‑style AWS environment deployed using Terraform. This project demonstrates Infrastructure‑as‑Code (IaC), secure networking, remote state management, and real DevOps workflows.
